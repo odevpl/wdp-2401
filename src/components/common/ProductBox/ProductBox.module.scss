@@ -28,7 +28,17 @@
       padding: 30px 15px 5px 15px;
     }
 
+    .image{
+      width: 100%;
+      height: 100%;
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
     .buttons {
+      position: inherit;
       display: flex;
       justify-content: space-between;
     }
