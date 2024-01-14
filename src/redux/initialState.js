@@ -30,7 +30,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '2',
-      favorite: false,
+      favorite: true,
       compared: false,
     },
     {
@@ -44,7 +44,7 @@ const initialState = {
       newFurniture: true,
       image: '3',
       favorite: false,
-      compared: false,
+      compared: true,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -56,8 +56,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '4',
-      favorite: false,
-      compared: false,
+      favorite: true,
+      compared: true,
     },
     {
       id: 'aenean-ru-bristique-5',
