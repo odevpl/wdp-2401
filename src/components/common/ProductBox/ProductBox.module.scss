@@ -39,8 +39,14 @@
 
     .buttons {
       position: inherit;
-      display: flex;
+      display: none;
       justify-content: space-between;
+    }
+  }
+
+  &:hover {
+    .buttons {
+      display: flex;
     }
   }
 
