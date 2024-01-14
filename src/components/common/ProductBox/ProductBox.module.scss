@@ -104,4 +104,10 @@ margin-bottom: 2rem;
     color: $oldPrice;
     text-decoration: line-through;
   }
+
+  .active {
+      color:$text-light-color;
+      background-color: $darkGrey;
+    }
 }
+
