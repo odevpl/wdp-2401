@@ -44,7 +44,7 @@ const ProductBox = ({ name, price, oldPrice, promo, stars, image }) => (
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
+        <Button variant='outline' className={styles.active}>
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button variant='outline'>
