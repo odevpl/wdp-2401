@@ -53,8 +53,8 @@ const ProductBox = ({ name, price, oldPrice, promo, stars, image }) => (
       </div>
       <div className={styles.oldPrice}>{oldPrice}</div>
       <div className={styles.price}>
-        <Button noHover variant='small'>
-          ${price}
+        <Button noHover variant='small' className={styles.priceBtn}>
+          $ {price}
         </Button>
       </div>
     </div>
