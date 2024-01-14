@@ -1,15 +1,45 @@
 $base-padding: 24px;
 
+/*DON'T DEFINE COLORS ANYWHERE ELSE*/
+
+/*Global*/
+$primary: #d58e32;
+$text-color: #2a2a2a;
+$text-light-color: #ffffff;
+$button-color: #2a2a2a;
+$old-price: #525252;
+
+/*Header*/
 $header-topbar-bg: #434343;
 $header-bg: #363636;
+$phone-number-color: #d8d8d8;
+$cart-box-icon-color: #ffffff;
+$cart-counter-color: #e0e3ed;
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
-
-$primary: #d58e32;
-
-$text-color: #2a2a2a;
-
+/*MenuBar*/
+$menu-bar-bg: #ffffff;
+$menu-bar-shadow-color: #01020233;
 $form-border-color: #292929;
 
-$old-price: #525252;
+/*FeatureBox*/
+$feature-box-color: #b6b6b6;
+
+/*NewFurniture*/
+$new-furniture-border-color: #e2e2e2;
+$new-furniture-dots-list-bg: #ffffff;
+$new-furniture-dots-link-bg: #e1e1e1;
+
+/*ProductBox*/
+$product-box-line-color: #2a2a2a;
+$product-box-border-color: #e1e1e1;
+$product-box-bg: #ffffff;
+$stars-color: #2a2a2a;
+$sale-bg: #292929;
+$photo-color: #f4f5f7;
+
+/*Footer*/
+$footer-claim-bg: #2a2a2a;
+$footer-bg: #363636;
+$footer-links-color: #a9a9a9;
+$footer-copyright-color: #a9a9a9;
+
