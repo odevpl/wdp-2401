@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { clsx } from 'clsx';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,7 +14,7 @@ import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
 import { addToFavorite } from '../../../redux/productsRedux';
 
-const ProductBox = ({ id, name, price, promo, stars, image, isFavorite }) => {
+const ProductBox = ({ id, name, price, promo, stars, image, isFavorite, compared, oldPrice }) => {
   const dispatch = useDispatch();
 
   const handleClick = e => {
@@ -57,10 +58,11 @@ const ProductBox = ({ id, name, price, promo, stars, image, isFavorite }) => {
           <Button variant='outline' onClick={handleClick} isFavorite={isFavorite}>
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
-          <Button variant='outline'>
+          <Button variant='outline' className={clsx(compared && styles.active)}>
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
+        <div className={styles.oldPrice}>{oldPrice}</div>
         <div className={styles.price}>
           <Button noHover variant='small' className={styles.priceBtn}>
             $ {price}
@@ -81,6 +83,7 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   image: PropTypes.string,
   isFavorite: PropTypes.bool,
+  compared: PropTypes.bool,
 };
 
 export default ProductBox;
