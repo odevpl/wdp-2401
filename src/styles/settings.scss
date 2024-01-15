@@ -30,6 +30,7 @@ $menu-bar-bg: $white;
 $menu-bar-shadow-color: $black;
 $form-border-color: $darkGrey;
 
+<<<<<<< HEAD
 /*FeatureBox*/
 $feature-box-color: $lightGrey;
 
@@ -51,3 +52,15 @@ $footer-claim-bg: $darkGrey;
 $footer-bg: $grey;
 $footer-links-color: $lightGrey;
 $footer-copyright-color: $lightGrey;
+
+.animation {
+  position:relative;
+  background-position: 100% 0;
+  transition-property: color, background, scale, bottom;
+  transition-duration: 250ms, 250ms, 250ms, 250ms;
+
+  &:hover{
+    //bottom: 5px;
+    scale:1.1;
+  }
+}
