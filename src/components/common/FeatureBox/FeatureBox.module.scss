@@ -1,6 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
+  @extend .animation;
   border: 1px solid $feature-box-color;
   text-align: center;
   margin-top: 40px;

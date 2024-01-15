@@ -27,6 +27,7 @@
 
   .cart {
     .cartBox {
+      @extend .animation;
       display: inline-block;
       position: relative;
       color: $cart-box-icon-color;
