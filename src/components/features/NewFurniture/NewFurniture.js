@@ -6,10 +6,20 @@ import ProductBox from '../../common/ProductBox/ProductBox';
 import Swipeable from '../../common/Swipeable/Swipeable';
 
 class NewFurniture extends React.Component {
-  state = {
-    activePage: 0,
-    activeCategory: 'bed',
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activePage: 0,
+      activeCategory: 'bed',
+    };
+
+    // Bind the methods to the class instance using arrow functions
+    this.handlePageChange = this.handlePageChange.bind(this);
+    this.handleCategoryChange = this.handleCategoryChange.bind(this);
+    this.handleSwipeLeft = this.handleSwipeLeft.bind(this);
+    this.handleSwipeRight = this.handleSwipeRight.bind(this);
+  }
 
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
