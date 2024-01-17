@@ -30,13 +30,17 @@ class NewFurniture extends React.Component {
   }
 
   handleSwipeLeft() {
-    const nextPage = this.state.activePage + 1;
-    this.setState({ activePage: nextPage });
+    if (this.state.activePage < this.lastPageIndex) {
+      const nextPage = this.state.activePage + 1;
+      this.setState({ activePage: nextPage });
+    }
   }
 
   handleSwipeRight() {
-    const previousPage = this.state.activePage - 1;
-    this.setState({ activePage: previousPage });
+    if (this.state.activePage > 0) {
+      const previousPage = this.state.activePage - 1;
+      this.setState({ activePage: previousPage });
+    }
   }
 
   render() {
@@ -45,6 +49,7 @@ class NewFurniture extends React.Component {
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
+    this.lastPageIndex = pagesCount - 1;
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
