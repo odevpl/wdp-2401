@@ -1,56 +1,55 @@
 @import "../../../styles/settings.scss";
-
 .root {
   border: 1px solid $form-border-color;
   display: inline-flex;
   height: 45px;
   color: $text-color;
-
   .category {
     border-right: 1px solid $form-border-color;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 10px;
     position: relative;
 
-    &:hover {
-      z-index: 0;
-      height: 100%;
-      background-color: $primary;
-      color: #ffffff;
-
-      .icon:first-child {
-        color: #ffffff;
-      }
-
-      select {
-        color: #ffffff;
-      }
-    }
-
     .icon:first-child {
+      margin-left: 10px;
       color: $primary;
-      position: absolute;
-      left: 10px;
-      z-index: 1;
+ }
+.icon:nth-of-type(2) {
+      margin-right: 10px;
     }
 
-    .icon:last-child {
-      position: absolute;
-      right: 10px;
-      z-index: 0;
+    span {
+      text-wrap: nowrap;
     }
 
-    select {
-      -webkit-appearance: none;
-      border: 0;
-      background-color: transparent;
-      padding: 10px 30px 10px 35px;
-      position: relative;
-      z-index: 1;
-      font-size: 13px;
+    ul {
+      margin:0;
+      padding:0;
+      width: 100%;
+      background-color: #ffffff;
+      border: 1px solid $form-border-color;
+      text-wrap: nowrap;
+      list-style-type: none;
+      align-items: center;
+      position: absolute;
+transform: translateY(100%);
+      top: -30px;
+      display: none;
 
-      &:focus {
-        outline: none;
+      li{
+        padding-left: 10px;
+      }
+
+      li:hover {
+        padding-left: 20px;
+        background-color: $primary;
+      }
+    }
+&:hover {
+      ul {
+        display: block;
       }
     }
   }
@@ -59,18 +58,15 @@
     display: flex;
     align-items: center;
     position: relative;
-
     input {
       border: 0;
       padding-left: 10px;
-      font-size: 14px;
+      font-size: 16px;
       outline: none;
-
       &::placeholder {
         color: $text-color;
       }
     }
-
     button {
       border: 0;
       background-color: transparent;
