@@ -3,12 +3,23 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import Swipeable from '../../common/Swipeable/Swipeable';
 
 class NewFurniture extends React.Component {
-  state = {
-    activePage: 0,
-    activeCategory: 'bed',
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activePage: 0,
+      activeCategory: 'bed',
+    };
+
+    // Bind the methods to the class instance using arrow functions
+    this.handlePageChange = this.handlePageChange.bind(this);
+    this.handleCategoryChange = this.handleCategoryChange.bind(this);
+    this.handleSwipeLeft = this.handleSwipeLeft.bind(this);
+    this.handleSwipeRight = this.handleSwipeRight.bind(this);
+  }
 
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
@@ -18,12 +29,27 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
+  handleSwipeLeft() {
+    if (this.state.activePage < this.lastPageIndex) {
+      const nextPage = this.state.activePage + 1;
+      this.setState({ activePage: nextPage });
+    }
+  }
+
+  handleSwipeRight() {
+    if (this.state.activePage > 0) {
+      const previousPage = this.state.activePage - 1;
+      this.setState({ activePage: previousPage });
+    }
+  }
+
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
+    this.lastPageIndex = pagesCount - 1;
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -66,13 +92,20 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
-                <ProductBox {...item} />
-              </div>
-            ))}
-          </div>
+          <Swipeable
+            leftAction={this.handleSwipeLeft}
+            rightAction={this.handleSwipeRight}
+          >
+            <div className='row'>
+              {categoryProducts
+                .slice(activePage * 8, (activePage + 1) * 8)
+                .map(item => (
+                  <div key={item.id} className='col-3'>
+                    <ProductBox {...item} />
+                  </div>
+                ))}
+            </div>
+          </Swipeable>
         </div>
       </div>
     );
