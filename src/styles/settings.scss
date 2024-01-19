@@ -2,44 +2,67 @@ $base-padding: 24px;
 
 /*DON'T DEFINE COLORS ANYWHERE ELSE*/
 
+/*Colors*/
+$darkGrey: #2a2a2a;
+$grey: #434343;
+$lightGrey: #a9a9a9;
+$greyWhite: #e1e1e1;
+$white: #ffffff;
+$black: #01020233;
+$orangeBrown: #d58e32;
+
 /*Global*/
+<<<<<<< HEAD
 $primary: #d58e32;
 $text-color: #2a2a2a;
 $text-light-color: #ffffff;
 $button-color: #2a2a2a;
 $old-price: #525252;
+=======
+$primary: $orangeBrown;
+$text-color: $darkGrey;
+$text-light-color: $white;
+$button-color: $darkGrey;
+>>>>>>> 359f205 (Fix colors constant)
 
 /*Header*/
-$header-topbar-bg: #434343;
-$header-bg: #363636;
-$phone-number-color: #d8d8d8;
-$cart-box-icon-color: #ffffff;
-$cart-counter-color: #e0e3ed;
+$header-topbar-bg: $grey;
+$header-bg: $grey;
+$phone-number-color: $greyWhite;
+$cart-box-icon-color: $white;
+$cart-counter-color: $greyWhite;
 
 /*MenuBar*/
-$menu-bar-bg: #ffffff;
-$menu-bar-shadow-color: #01020233;
-$form-border-color: #292929;
+$menu-bar-bg: $white;
+$menu-bar-shadow-color: $black;
+$form-border-color: $darkGrey;
 
 /*FeatureBox*/
-$feature-box-color: #b6b6b6;
+$feature-box-color: $lightGrey;
 
 /*NewFurniture*/
-$new-furniture-border-color: #e2e2e2;
-$new-furniture-dots-list-bg: #ffffff;
-$new-furniture-dots-link-bg: #e1e1e1;
+$new-furniture-border-color: $greyWhite;
+$new-furniture-dots-list-bg: $white;
+$new-furniture-dots-link-bg: $greyWhite;
 
 /*ProductBox*/
-$product-box-line-color: #2a2a2a;
-$product-box-border-color: #e1e1e1;
-$product-box-bg: #ffffff;
-$stars-color: #2a2a2a;
-$sale-bg: #292929;
-$photo-color: #f4f5f7;
+$product-box-line-color: $darkGrey;
+$product-box-border-color: $greyWhite;
+$product-box-bg: $white;
+$stars-color: $darkGrey;
+$sale-bg: $darkGrey;
+$photo-color: $greyWhite;
 
 /*Footer*/
+<<<<<<< HEAD
 $footer-claim-bg: #2a2a2a;
 $footer-bg: #363636;
 $footer-links-color: #a9a9a9;
 $footer-copyright-color: #a9a9a9;
 
+=======
+$footer-claim-bg: $darkGrey;
+$footer-bg: $grey;
+$footer-links-color: $lightGrey;
+$footer-copyright-color: $lightGrey;
+>>>>>>> 359f205 (Fix colors constant)

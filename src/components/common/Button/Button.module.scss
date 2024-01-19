@@ -39,3 +39,14 @@
     color: $text-light-color;
   }
 }
+
+.isFavorite {
+  border-color: $primary;
+  color: $text-light-color;
+  background-color: $primary;
+
+  &:not(.noHover):hover {
+    background-color: $text-light-color;
+    color: $primary;
+  }
+}
