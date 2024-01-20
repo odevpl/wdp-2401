@@ -104,4 +104,9 @@
     color: $old-price;
     text-decoration: line-through;
   }
+
+  .active {
+      color:$primary;
+      background-color: #2a2a2a;
+    }
 }
