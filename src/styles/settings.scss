@@ -12,18 +12,11 @@ $black: #01020233;
 $orangeBrown: #d58e32;
 
 /*Global*/
-<<<<<<< HEAD
-$primary: #d58e32;
-$text-color: #2a2a2a;
-$text-light-color: #ffffff;
-$button-color: #2a2a2a;
-$old-price: #525252;
-=======
 $primary: $orangeBrown;
 $text-color: $darkGrey;
 $text-light-color: $white;
 $button-color: $darkGrey;
->>>>>>> 359f205 (Fix colors constant)
+$oldPrice: $grey;
 
 /*Header*/
 $header-topbar-bg: $grey;
@@ -54,15 +47,7 @@ $sale-bg: $darkGrey;
 $photo-color: $greyWhite;
 
 /*Footer*/
-<<<<<<< HEAD
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
-$footer-links-color: #a9a9a9;
-$footer-copyright-color: #a9a9a9;
-
-=======
 $footer-claim-bg: $darkGrey;
 $footer-bg: $grey;
 $footer-links-color: $lightGrey;
 $footer-copyright-color: $lightGrey;
->>>>>>> 359f205 (Fix colors constant)
