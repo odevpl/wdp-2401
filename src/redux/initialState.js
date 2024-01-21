@@ -31,8 +31,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '2',
-      favorite: false,
-      compared: true,
+      favorite: true,
+      compared: false,
     },
     {
       id: 'aenean-ru-bristique-3',

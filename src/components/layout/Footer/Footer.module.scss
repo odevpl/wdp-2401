@@ -70,7 +70,11 @@
 
           a {
             @extend .animation;
+<<<<<<< HEAD
             color: $footer-links-color;
+=======
+            color: rgb(169, 169, 169);
+>>>>>>> 700b7f734c6aba7156e25a8b434245255cf63d88
             text-decoration: none;
 
             &:hover {
