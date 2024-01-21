@@ -65,7 +65,7 @@ const ProductBox = ({
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline' onClick={handleClickFavorite} favorite={favorite}>
+          <Button variant='outline' onClick={handleClickFavorite} className={clsx(favorite && styles.active)} favorite={favorite}>
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button variant='outline' className={clsx(compared && styles.active)}>
