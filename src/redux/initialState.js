@@ -18,7 +18,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '1',
-      isFavorite: true,
+      favorite: true,
       compared: false,
     },
     {
@@ -31,7 +31,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '2',
-      isFavorite: false,
+      favorite: false,
       compared: true,
     },
     {
@@ -44,7 +44,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '3',
-      isFavorite: true,
+      favorite: true,
       compared: true,
     },
     {
@@ -57,7 +57,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '4',
-      isFavorite: false,
+      favorite: false,
       compared: true,
     },
     {
@@ -70,7 +70,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '5',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -83,7 +83,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '6',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -96,7 +96,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '7',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -109,7 +109,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '8',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -122,7 +122,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '9',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -135,7 +135,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '10',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -148,7 +148,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '11',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -161,7 +161,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '12',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -174,7 +174,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '13',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -187,7 +187,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '14',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -200,7 +200,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '15',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -213,7 +213,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '16',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -226,7 +226,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '17',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -239,7 +239,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '18',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -252,7 +252,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '19',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -265,7 +265,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '20',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -278,7 +278,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '21',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -291,7 +291,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '22',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -304,7 +304,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '23',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
     {
@@ -317,7 +317,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '24',
-      isFavorite: false,
+      favorite: false,
       compared: false,
     },
   ],

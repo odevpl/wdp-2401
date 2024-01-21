@@ -9,7 +9,7 @@ const Button = ({
   variant,
   noHover,
   className: propClassName,
-  isFavorite,
+  favorite,
   ...props
 }) => {
   const classes = [];
@@ -30,7 +30,7 @@ const Button = ({
     <Comp
       href='#'
       {...props}
-      className={clsx(classes.join(' '), isFavorite && styles.isFavorite)}
+      className={clsx(classes.join(' '), favorite && styles.favorite)}
     >
       {children}
     </Comp>
@@ -42,7 +42,7 @@ Button.propTypes = {
   noHover: PropTypes.bool,
   className: PropTypes.string,
   variant: PropTypes.string,
-  isFavorite: PropTypes.bool,
+  favorite: PropTypes.bool,
 };
 
 export default Button;
