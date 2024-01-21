@@ -6,12 +6,45 @@
 
   :global(.container) > :global(.row) {
     height: 84px;
+
+    @media (min-width: 800px) and (max-width: 1200px) {
+      height: 168px;
+    }
+  }
+
+  .menuBar {
+    justify-content: space-between;
+    
+
+    @media (max-width: 1200px) {
+      justify-content: center;
+      flex-direction: column-reverse;
+      
+      > * {
+        justify-content: center;
+        height: 50%;
+      }
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: row;
+      align-content: center;
+      
+      > * {
+        margin: 5px 0;
+      }
+    }
+  }
+
+  .searching {
+    display: flex;
+    align-items: center;
   }
 
   .menu {
-    display: flex;
+    display: flex; 
     align-self: stretch;
-
+    
     ul {
       margin: 0;
       padding: 0;
@@ -46,6 +79,43 @@
 
       &.active {
         border-color: $text-color;
+      }
+    } 
+
+    .menulist {
+      z-index: 1;
+    }
+
+    .menubt {
+      display: none;
+      background-color: #ffffff;
+      justify-content: center;
+      font-size: 20px;
+      border: 1px solid black;
+    }
+
+    @media (max-width: 800px) {
+      .menulist {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff; 
+        position: absolute;
+        margin-top: 60px;
+        border: 1px solid black; 
+      }
+
+      .menulist:target  {
+        display: flex;
+      }
+
+      .menubt {
+        display: flex;
+      }
+
+      a {
+        display: flex;
+        border: 0;
+        width: 100%;
       }
     }
   }
