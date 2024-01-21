@@ -12,7 +12,7 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
-import { addToFavorite } from '../../../redux/productsRedux';
+import { toggleProductFavorite } from '../../../redux/productsRedux';
 
 const ProductBox = ({
   id,
@@ -29,7 +29,7 @@ const ProductBox = ({
 
   const handleClickFavorite = e => {
     e.preventDefault();
-    dispatch(addToFavorite(id));
+    dispatch(toggleProductFavorite(id));
   };
 
   return (
