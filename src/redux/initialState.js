@@ -6,6 +6,7 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -17,7 +18,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '1',
-      favorite: false,
+      favorite: true,
       compared: false,
     },
     {
@@ -43,7 +44,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '3',
-      favorite: false,
+      favorite: true,
       compared: true,
     },
     {
@@ -56,7 +57,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       image: '4',
-      favorite: true,
+      favorite: false,
       compared: true,
     },
     {
@@ -320,6 +321,7 @@ const initialState = {
       compared: false,
     },
   ],
+
   cart: {
     products: [],
   },

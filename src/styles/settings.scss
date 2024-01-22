@@ -1,18 +1,56 @@
 $base-padding: 24px;
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
+/*DON'T DEFINE COLORS ANYWHERE ELSE*/
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
+/*Colors*/
+$darkGrey: #2a2a2a;
+$grey: #434343;
+$lightGrey: #a9a9a9;
+$greyWhite: #e1e1e1;
+$white: #ffffff;
+$black: #01020233;
+$orangeBrown: #d58e32;
 
-$primary: #d58e32;
+/*Global*/
+$primary: $orangeBrown;
+$text-color: $darkGrey;
+$text-light-color: $white;
+$button-color: $darkGrey;
+$oldPrice: $grey;
 
-$text-color: #2a2a2a;
+/*Header*/
+$header-topbar-bg: $grey;
+$header-bg: $grey;
+$phone-number-color: $greyWhite;
+$cart-box-icon-color: $white;
+$cart-counter-color: $greyWhite;
 
-$form-border-color: #292929;
+/*MenuBar*/
+$menu-bar-bg: $white;
+$menu-bar-shadow-color: $black;
+$form-border-color: $darkGrey;
 
-$old-price: #525252;
+/*FeatureBox*/
+$feature-box-color: $lightGrey;
+
+/*NewFurniture*/
+$new-furniture-border-color: $greyWhite;
+$new-furniture-dots-list-bg: $white;
+$new-furniture-dots-link-bg: $greyWhite;
+
+/*ProductBox*/
+$product-box-line-color: $darkGrey;
+$product-box-border-color: $greyWhite;
+$product-box-bg: $white;
+$stars-color: $darkGrey;
+$sale-bg: $darkGrey;
+$photo-color: $greyWhite;
+
+/*Footer*/
+$footer-claim-bg: $darkGrey;
+$footer-bg: $grey;
+$footer-links-color: $lightGrey;
+$footer-copyright-color: $lightGrey;
 
 .animation {
   position:relative;
@@ -26,3 +64,4 @@ $old-price: #525252;
     //scale:1.1;
   }
 }
+

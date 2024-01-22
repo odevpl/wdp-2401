@@ -6,7 +6,7 @@
     position: relative;
 
     :global(.row) > * {
-      border-bottom: 4px solid #e2e2e2;
+      border-bottom: 4px solid $new-furniture-border-color;
     }
 
     .heading {
@@ -43,7 +43,7 @@
           font-weight: 600;
 
           a {
-            color: rgb(42, 42, 42);
+            color: $text-color;
             position: relative;
             text-decoration: none;
             font-size: 18px;
@@ -74,7 +74,7 @@
         margin: 0;
         padding: 0 0 0 1rem;
         list-style: none;
-        background-color: #ffffff;
+        background-color: $new-furniture-dots-list-bg;
         transform: translateY(15px);
 
         li {
