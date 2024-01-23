@@ -1,19 +1,20 @@
 .stickyBar {
   position: fixed;
+  z-index: 1;
   bottom: 0;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: #f0f0f0;
   padding: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
   img {
-    width: 50px; /* Set the width of your images */
-    height: auto;
-    margin: 0 5px; /* Adjust margin as needed */
+    width: 177.4px;
+    height: 165.7px;
+    margin: 0 15px;
   }
 }
 
