@@ -2,19 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './StickyBar.module.scss';
 
-const StickyBar = ({ id, name, image }) => {
+const StickyBar = ({ comparedProducts }) => {
   return (
     <div className={styles.stickyBar}>
-      <img
-        alt={name}
-        src={process.env.PUBLIC_URL + `/images/furnitures/${image}.webp`}
-      />
+      {comparedProducts.map(item => (
+        <img
+          key={item.id}
+          alt={item.name}
+          src={process.env.PUBLIC_URL + `/images/furnitures/${item.image}.webp`}
+        />
+      ))}
     </div>
   );
 };
 
 StickyBar.propTypes = {
-  id: PropTypes.string,
+  comparedProducts: PropTypes.array,
   name: PropTypes.string,
   image: PropTypes.string,
 };
