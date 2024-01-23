@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './StickyBar.module.scss';
+import Button from '../Button/Button';
 
 const StickyBar = ({ comparedProducts }) => {
   return (
@@ -12,6 +13,7 @@ const StickyBar = ({ comparedProducts }) => {
           src={process.env.PUBLIC_URL + `/images/furnitures/${item.image}.webp`}
         />
       ))}
+      <Button variant='small'>Compare</Button>
     </div>
   );
 };
