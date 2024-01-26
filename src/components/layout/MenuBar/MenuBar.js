@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ProductSearch from '../../features/ProductSearch/ProductSearch';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,10 +16,10 @@ const MenuBar = ({ children }) => (
           <ProductSearch />
         </div>
         <div className={'col-auto ' + styles.menu}>
-          <a className={styles.menubt} href='#menu'>
+          <a className={styles.menubt}>
             <FontAwesomeIcon className={styles.icon} icon={faBars} />
           </a>
-          <ul className={styles.menulist} id='menu'>
+          <ul className={styles.menulist}>
             <li>
               <a href='#' className={styles.active}>
                 Home
