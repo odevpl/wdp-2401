@@ -10,7 +10,7 @@ const TopBar = () => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row'>
-        <div className={`col text-left ${styles.topOptions}`}>
+        <div className={`col-8 col-sm text-left ${styles.topOptions}`}>
           <ul>
             <li>
               <a href='#'>
@@ -29,7 +29,7 @@ const TopBar = () => (
             </li>
           </ul>
         </div>
-        <div className={`col text-right ${styles.topMenu}`}>
+        <div className={`col-4 col-sm text-right ${styles.topMenu}`}>
           <ul>
             <li>
               <a href='#'>
@@ -39,6 +39,16 @@ const TopBar = () => (
             <li>
               <a href='#'>
                 <FontAwesomeIcon className={styles.icon} icon={faLock} /> Register
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                <FontAwesomeIcon className={styles.icon} icon={faUser} />
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                <FontAwesomeIcon className={styles.icon} icon={faLock} />
               </a>
             </li>
             <li>
