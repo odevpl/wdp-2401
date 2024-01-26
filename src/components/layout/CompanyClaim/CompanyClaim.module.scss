@@ -80,11 +80,14 @@
       order: 3;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       flex-basis: 300px;
-      
+      align-self: flex-start;
       p{
         font-size: 14px;
+        .icon{
+          font-size: 25px;
+        }
       }
     }
 
