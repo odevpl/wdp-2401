@@ -74,7 +74,7 @@
   }
 }
 
-@media (max-width: 1075px) {
+@media (max-width: 1150px) {
   .root {
     :global(.container) > :global(.row) {
       height: 168px;
@@ -82,7 +82,7 @@
   }
 }
 
-@media (min-width: 567px) and (max-width: 1075px) {
+@media (min-width: 567px) and (max-width: 1150px) {
   .menuBar {
     justify-content: center;
     flex-direction: column-reverse;
