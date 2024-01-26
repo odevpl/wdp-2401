@@ -14,6 +14,7 @@
       line-height: 42px;
       color: $phone-number-color;
       font-weight: 500;
+      text-wrap: nowrap;
 
       .icon {
         font-size: 32px;
@@ -69,6 +70,34 @@
           background-color: lighten($primary, 10%);
         }
       }
+    }
+  }
+}
+
+@media (max-width: 426px){
+  .root{
+    .phoneNumber {
+      order: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      p{
+        font-size: 14px;
+      }
+    }
+
+    .logo {
+      order: 1;
+      display: flex;
+      align-self: flex-start;
+    }
+
+    .cart {
+      order: 2;
+      display: flex;
+      justify-content: right;
+      align-self: flex-start;
     }
   }
 }
