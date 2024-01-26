@@ -41,3 +41,15 @@
     }
   }
 }
+
+@media (max-width: 504px) {
+  .root{
+    .topOptions ul li{
+      margin-right: 0.5rem;
+    }
+
+    .topMenu ul li {
+      margin-left: 0.5em;
+    }
+  }
+}
