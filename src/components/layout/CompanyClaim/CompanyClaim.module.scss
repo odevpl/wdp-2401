@@ -74,13 +74,14 @@
   }
 }
 
-@media (max-width: 426px){
+@media (max-width: 499px){
   .root{
     .phoneNumber {
       order: 3;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-basis: 300px;
       
       p{
         font-size: 14px;
