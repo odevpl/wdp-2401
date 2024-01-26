@@ -40,6 +40,9 @@ const MenuBar = ({ children }) => (
             <li>
               <a href='#'>Bedroom</a>
             </li>
+            <li>
+              <a href='#'>Blog</a>
+            </li>
           </ul>
         </div>
       </div>
