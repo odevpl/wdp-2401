@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import Swipeable from '../../common/Swipeable/Swipeable';
+import StickyBar from '../../common/StickyBar/StickyBar';
 
 class NewFurniture extends React.Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class NewFurniture extends React.Component {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
 
+    const comparedProducts = products.filter(item => item.compared === true);
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
     this.lastPageIndex = pagesCount - 1;
@@ -106,6 +108,9 @@ class NewFurniture extends React.Component {
                 ))}
             </div>
           </Swipeable>
+          {comparedProducts.length > 0 && (
+            <StickyBar comparedProducts={comparedProducts} />
+          )}
         </div>
       </div>
     );
