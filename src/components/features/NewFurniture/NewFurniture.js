@@ -72,13 +72,13 @@ class NewFurniture extends React.Component {
         <div className='container'>
           <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
-              <div className={'col-auto ' + styles.heading}>
+              <div className={'col-12 col-md-auto mb-md-0 mb-4 ' + styles.heading}>
                 <h3>New furniture</h3>
               </div>
-              <div className={'col ' + styles.menu}>
-                <ul>
+              <div className={'col-12 col-md ' + styles.menu}>
+                <ul className={styles.categories}>
                   {categories.map(item => (
-                    <li key={item.id}>
+                    <li className={styles.categorie} key={item.id}>
                       <a
                         className={item.id === activeCategory && styles.active}
                         onClick={() => this.handleCategoryChange(item.id)}
@@ -89,7 +89,7 @@ class NewFurniture extends React.Component {
                   ))}
                 </ul>
               </div>
-              <div className={'col-auto ' + styles.dots}>
+              <div className={'col-6 col-md-auto ' + styles.dots}>
                 <ul>{dots}</ul>
               </div>
             </div>
@@ -102,7 +102,11 @@ class NewFurniture extends React.Component {
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
-                  <div key={item.id} id={item.id} className='col-3'>
+                  <div
+                    key={item.id}
+                    id={item.id}
+                    className='col-lg-3 col-md-4 col-sm-6 col-12'
+                  >
                     <ProductBox {...item} />
                   </div>
                 ))}
