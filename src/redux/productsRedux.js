@@ -47,8 +47,8 @@ export default function reducer(statePart = [], action = {}) {
       );
     case ADD_PRODUCT_RATING:
       return statePart.map(product =>
-        product.id === action.payload.id
-          ? { ...product, myRating: action.payload.myRating }
+        product.id === action.payload.idProduct
+          ? { ...product, myRating: action.payload.starKey }
           : product
       );
     default:
