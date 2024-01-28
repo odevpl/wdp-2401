@@ -12,7 +12,12 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleProductFavorite, toggleProductCompared, getComparedProducts } from '../../../redux/productsRedux';
+import {
+  toggleProductFavorite,
+  toggleProductCompared,
+  getComparedProducts,
+} from '../../../redux/productsRedux';
+import ProductStars from '../ProductStars/ProductStars';
 
 const ProductBox = ({
   id,
@@ -56,22 +61,17 @@ const ProductBox = ({
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <div className={styles.stars}>
-          {[1, 2, 3, 4, 5].map(i => (
-            <a key={i} href='#'>
-              {i <= stars ? (
-                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-              ) : (
-                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-              )}
-            </a>
-          ))}
-        </div>
+        <ProductStars id={id} stars={stars} />
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline' onClick={handleClickFavorite} className={clsx(favorite && styles.active)} favorite={favorite}>
+          <Button
+            variant='outline'
+            onClick={handleClickFavorite}
+            className={clsx(favorite && styles.active)}
+            favorite={favorite}
+          >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button
