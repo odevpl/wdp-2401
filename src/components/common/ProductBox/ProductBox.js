@@ -25,6 +25,7 @@ const ProductBox = ({
   favorite,
   compared,
   oldPrice,
+  myRating,
 }) => {
   const dispatch = useDispatch();
   const comparedProducts = useSelector(state => getComparedProducts(state));
@@ -57,7 +58,7 @@ const ProductBox = ({
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <ProductStars id={id} stars={stars} />
+        <ProductStars id={id} stars={stars} myRating={myRating} />
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
@@ -100,6 +101,7 @@ ProductBox.propTypes = {
   image: PropTypes.string,
   favorite: PropTypes.bool,
   compared: PropTypes.bool,
+  myRating: PropTypes.number,
 };
 
 export default ProductBox;
