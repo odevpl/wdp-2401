@@ -3,3 +3,10 @@
 .root {
   padding: 5rem 0;
 }
+
+@media (max-width: 768px) {
+  .box {
+    width: 50%;
+    padding: 25px;
+  }
+}
