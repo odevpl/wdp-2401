@@ -4,15 +4,16 @@ import { clsx } from 'clsx';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faStar,
-  faExchangeAlt,
-  faShoppingBasket,
-} from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleProductFavorite, toggleProductCompared, getComparedProducts } from '../../../redux/productsRedux';
+import {
+  toggleProductFavorite,
+  toggleProductCompared,
+  getComparedProducts,
+} from '../../../redux/productsRedux';
+import ProductStars from '../ProductStars/ProductStars';
 
 const ProductBox = ({
   id,
@@ -24,6 +25,7 @@ const ProductBox = ({
   favorite,
   compared,
   oldPrice,
+  myRating,
 }) => {
   const dispatch = useDispatch();
   const comparedProducts = useSelector(state => getComparedProducts(state));
@@ -56,22 +58,17 @@ const ProductBox = ({
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
-        <div className={styles.stars}>
-          {[1, 2, 3, 4, 5].map(i => (
-            <a key={i} href='#'>
-              {i <= stars ? (
-                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-              ) : (
-                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-              )}
-            </a>
-          ))}
-        </div>
+        <ProductStars id={id} stars={stars} myRating={myRating} />
       </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
-          <Button variant='outline' onClick={handleClickFavorite} className={clsx(favorite && styles.active)} favorite={favorite}>
+          <Button
+            variant='outline'
+            onClick={handleClickFavorite}
+            className={clsx(favorite && styles.active)}
+            favorite={favorite}
+          >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button
@@ -104,6 +101,7 @@ ProductBox.propTypes = {
   image: PropTypes.string,
   favorite: PropTypes.bool,
   compared: PropTypes.bool,
+  myRating: PropTypes.number,
 };
 
 export default ProductBox;

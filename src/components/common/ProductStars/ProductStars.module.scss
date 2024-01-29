@@ -1,0 +1,12 @@
+@import "../../../styles/settings.scss";
+
+.stars {
+  a {
+    text-decoration: none;
+    color: $stars-color;
+  }
+}
+
+.myRating {
+  color:$hovered-clicked-stars;
+}
