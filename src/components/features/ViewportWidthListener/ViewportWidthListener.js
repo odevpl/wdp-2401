@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styles from './ViewportWidthListener.module.scss';
+import { useDispatch } from 'react-redux';
+import { changeCurrentMode } from '../../../redux/currentModeRedux';
 
 const ViewportWidthListener = () => {
+  const dispatch = useDispatch();
+
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [currentMode, setCurrentMode] = useState(getCurrentMode(viewportWidth));
 
@@ -15,13 +19,14 @@ const ViewportWidthListener = () => {
     }
   }
 
-  const updateViewport = () => {
-    const newWidth = window.innerWidth;
-    setViewportWidth(newWidth);
-    setCurrentMode(getCurrentMode(newWidth));
-  };
-
   useEffect(() => {
+    const updateViewport = () => {
+      const newWidth = window.innerWidth;
+      setViewportWidth(newWidth);
+      setCurrentMode(getCurrentMode(newWidth));
+      dispatch(changeCurrentMode(currentMode));
+    };
+
     updateViewport();
 
     window.addEventListener('resize', updateViewport);
@@ -29,7 +34,7 @@ const ViewportWidthListener = () => {
     return () => {
       window.removeEventListener('resize', updateViewport);
     };
-  }, [updateViewport]);
+  }, [currentMode, dispatch]);
 
   return (
     <div className={styles.currentMode}>
