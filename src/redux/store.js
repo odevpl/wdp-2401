@@ -4,9 +4,11 @@ import initialState from './initialState';
 import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
+import currentModeReducer from './currentModeRedux';
 
 // define reducers
 const reducers = {
+  currentMode: currentModeReducer,
   cart: cartReducer,
   categories: categoriesReducer,
   products: productsReducer,
