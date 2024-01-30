@@ -5,18 +5,18 @@ const reducerName = 'currentMode';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
-const SET_CURRENT_MODE = createActionName('SET_CURRENT_MODE');
+const CHANGE_CURRENT_MODE = createActionName('CHANGE_CURRENT_MODE');
 
 /* action creators */
-export const setCurrentMode = payload => ({
+export const changeCurrentMode = payload => ({
   payload,
-  type: SET_CURRENT_MODE,
+  type: CHANGE_CURRENT_MODE,
 });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
-    case SET_CURRENT_MODE:
+    case CHANGE_CURRENT_MODE:
       return { currentMode: action.payload };
     default:
       return statePart;
