@@ -5,6 +5,7 @@ import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import Swipeable from '../../common/Swipeable/Swipeable';
 import StickyBar from '../../common/StickyBar/StickyBar';
+import { connect } from 'react-redux';
 
 class NewFurniture extends React.Component {
   constructor(props) {
@@ -45,26 +46,39 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, currentMode } = this.props;
     const { activeCategory, activePage } = this.state;
+    const mode = currentMode.currentMode;
 
     const comparedProducts = products.filter(item => item.compared === true);
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+
+    let itemsPerPage;
+    if (mode === 'desktop') {
+      itemsPerPage = 8;
+    } else if (mode === 'tablet') {
+      itemsPerPage = 3;
+    } else if (mode === 'mobile') {
+      itemsPerPage = 1;
+    }
+
+    const pagesCount = Math.ceil(categoryProducts.length / itemsPerPage);
     this.lastPageIndex = pagesCount - 1;
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
-      dots.push(
-        <li>
-          <a
-            onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
-          >
-            page {i}
-          </a>
-        </li>
-      );
+      if (dots.length < 3) {
+        dots.push(
+          <li>
+            <a
+              onClick={() => this.handlePageChange(i)}
+              className={i === activePage && styles.active}
+            >
+              page {i}
+            </a>
+          </li>
+        );
+      }
     }
 
     return (
@@ -100,7 +114,7 @@ class NewFurniture extends React.Component {
           >
             <div className='row'>
               {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
+                .slice(activePage * itemsPerPage, (activePage + 1) * itemsPerPage)
                 .map(item => (
                   <div
                     key={item.id}
@@ -141,6 +155,7 @@ NewFurniture.propTypes = {
       favorite: PropTypes.bool,
     })
   ),
+  currentMode: PropTypes.object.isRequired,
 };
 
 NewFurniture.defaultProps = {
@@ -148,4 +163,8 @@ NewFurniture.defaultProps = {
   products: [],
 };
 
-export default NewFurniture;
+const mapStateToProps = state => ({
+  currentMode: state.currentMode,
+});
+
+export default connect(mapStateToProps)(NewFurniture);
