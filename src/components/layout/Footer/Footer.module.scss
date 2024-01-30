@@ -4,6 +4,12 @@
   .footerMenu {
     background-color: $footer-bg;
     padding: 3rem 0;
+  
+  .menuContainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
 
     .menuWrapper {
       h6 {
@@ -46,7 +52,7 @@
     background-color: $footer-claim-bg;
 
     :global(.container) > :global(.row) {
-      height: 95px;
+      height: 105px;
     }
 
     .copyright {
@@ -80,5 +86,37 @@
         }
       }
     }
+  }
+}
+
+@media (min-width: 789px) {
+  .menuContainer {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 788px) {
+  .menuContainer {
+    justify-content: center;
+  }
+}
+
+
+@media (min-width: 381px) and (max-width: 788px) {
+  .menuBox {
+    width: 35%;
+    .image {
+      position: absolute;
+      bottom: -15%;
+      left: 50%;
+      transform: translate(-50%, -50%);    
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .menuBox {
+    width: 100%;
+    margin-left: 20px;
   }
 }
