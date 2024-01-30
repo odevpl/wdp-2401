@@ -1,4 +1,6 @@
 const initialState = {
+  currentMode: 'desktop',
+
   categories: [
     { id: 'bed', name: 'Bed' },
     { id: 'chair', name: 'Chair' },
